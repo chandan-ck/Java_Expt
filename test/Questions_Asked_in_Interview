@@ -1,0 +1,200 @@
+Morgan Stanley:
+
+OOPs concepts in your project
+how polymerphism(give me some example)
+if the method return type is different does that run time/compile time polymerphism
+
+
+//---------------
+
+hacker rank question 
+--- wendy and bob question
+http://cplusplus.com/forum/beginner/271386/
+https://game-winner-hackerrank-wendy-and-bob-solution.takoradidyslexia.online/
+--- create susbset from given elements so that it will have min 3/given and the number should be between min-max range
+	return the count
+eg:
+
+[1,2,3,4,5,6,7,8] min no of elem=3 min range=4 maxrange=7
+
+{4,5,6}(4,5,7}{5,6,7}
+so count =3
+
+
+//---------------
+
+
+
+Diff bet Abstract class/interface
+can we have constructor in Abstract class--if yes how the object getting created
+Program ooutput
+public class C {
+
+	public static void main(String []args) {
+		A ob=new A(1,"abx");
+		m2(ob);
+	}
+
+	private static A m2(A obj) {
+		// TODO Auto-generated method stub
+		obj.setName("aaa");
+		obj=new A(1,"xxxxx");
+		System.out.println(obj.getName());
+		
+		return obj;
+	}
+}
+
+
+what are the collections you had used in ur project
+how the uniqueness and order is maintained in Set and tree respectively
+
+
+---Design the music player with unique and random songs playlist at a time
+---read a file and show the occurance of authors in the file---complexity and how can we improve 
+---put object in set and when the unique ness check is called
+
+Applied Materials:
+
+-- Create optimal hashmap which can store only 3 element(no memory wastage)
+-- Creata a prod ready doubly linkedlist that can do operation(add iterate reverse)
+-- create a thread where the execution will be passed to diff thread for execution(print 1-10 in async manner)
+
+wells fargo
+-- design LRU cache
+-- from a huge string find the first non repeating character.
+-- Find the triplet from an array where the sum is a given number--find optimal solution
+--What is the design patteren you use in micro servie.what are possible pattern
+-- Which cloud you are using and how do you configure a new micro service
+-- what are the things that needs to be taken care while creating other than code?
+-- which private cloud you are using and what functionality of (cloudfoundry ) you are using
+
+
+Paypal  SDE 3-----
+
+
+Implement CustomSet
+
+CustomSet() Initializes the CustomSet object.
+bool insert(int val) Inserts an item val into the set if not present. Returns true if the item was not present, false otherwise.
+bool remove(int val) Removes an item val from the set if present. Returns true if the item was present, false otherwise.
+int getRandom() Returns a random element from the current set of elements (it's guaranteed that at least one element exists when this method is called). Each element must have the same probability of being returned.
+https://leetcode.com/problems/insert-delete-getrandom-o1/
+Ans---for the same
+https://www.programcreek.com/2014/08/leetcode-insert-delete-getrandom-o1-java/
+https://evelynn.gitbooks.io/amazon-interview/content/chapter1/insert-delete-getrandom-o1.html
+
+Amazon interview Questins:
+https://evelynn.gitbooks.io/amazon-interview/content/chapter1/insert-delete-getrandom-o1.html
+https://www.programcreek.com/2014/08/leetcode-insert-delete-getrandom-o1-java/
+
+
+insert -> 10
+insert -> 20
+getRandom -> 
+
+---Check the randomness and how to ensure the probability of getting the element is same---
+Class CustumSet{
+    
+    public static final Object instance=new Object();
+    
+    
+     Map<Integer,Object> Entry;
+    CustumSet(){
+       entry=new HashMap<Integer,Object>;
+        }
+    
+    
+    public boolean insert(Integer i){
+        int randomIndex= (int)(size * Math.randam());
+        
+        
+        if(entry.put(i,randomIndex)==null)
+            return true;
+        else
+            return false;       
+        
+        }
+        
+        public boolean remove(Integer i){
+        
+        if(entry.containsKey(i))
+               entry.remove(i);
+        else
+            return false;
+        }
+        
+       public  int getRandom(){
+           
+           int size=entry.size();
+           
+           if(size==0)
+               sop("no element present);
+           
+           int randomIndex= (int)(size * Math.randam());
+           
+           return 
+           }
+        
+    }
+
+---
+
+
+
+can we store objects in collections ?
+If yes How to store a all unique objects in collections ?
+	implementiong equals and hashcode....{sample to write code }
+	storing in set/hashset...when the equals and hashcode method ll be called..
+	can we store in unique objects in List ??if yes..how to maintain uniqueness
+
+store a employee object in list
+	how to sort using emp salary(comparable interface)
+	how to sort using emp salary and joining date(comparator)--sample code---in java8
+
+--
+how do we generally extract values from map...
+if i want to extract a key from value.....(can have multiple similar values ....check the program exit condition)	
+
+Reading a file in java line by line (eg: abc 123 kk aa---let the first column represents the person name...
+	occurance of the author name in the file..(can use map...but the complexity....
+	how to optimize?
+design a music player with unique playlist played only once..
+---
+can we loop through the arraylist and remove an element...
+	list.remove(i)----ConcurrentModificationException“. How will you prevent this error?
+	Instead of removing from the list, use an Iterator and remove from the iterator to prevent the exception.
+	
+	----Use the CopyOnWriteArrayList instead of an ArrayList.
+			what is the working principle?
+
+Soring a collection(list)..... how treeset does the sorting....
+call by value questions--pass a object and change value without returning..print  the value in the after calling...
+difeerence between map/flatmap....ask based on the questions
+
+---how to avoid out of memory exception...
+----suppose i have a larger xml file...while reading its giving outof memmory exception..how to read that(different parser.../increase memory-- -xmsx argument)
+------------------------
+Functional programming...
+
+can we have a default method in interface..if so how that is being called..process of object initialization...
+Rest services....
+
+--start from login authentication....
+	wanted to have a single signon type of authentication....i have different login page for different application(oauth/jwt token)
+-- i want to authenticate the service...how to do ....
+	different ways(basic auth mechanism and oauth/jwt)
+--- wanted to display custom exception messege and error code at the service layer..how to do that in spring?
+---annotations in spring and questions on annotations(@repository/@component/@service/@controller)
+--- can we use GET/PUT instead of POST...reasons....
+--- bean scope .. session vs globalsession with exxample
+--- Despather servlet working and where can i set the context path for spring application
+---/if i add another controller mapping with that ..wht happens?
+--- i want to show the app is down in between particular time(11am -12)--howe to do that...
+	(how to design interceptors)
+
+
+-- global logic--Adobe
+
+Saksham Wason2:10 PM
+The cost of a stock on each day is given in an array, find the max profit that you can make by buying and selling in those days. For example, if the given array is {100, 180, 260, 310, 40, 535, 695}, the maximum profit can earned by buying on day 0, selling on day 3. Again buy on day 4 and sell on day 6. If the given array of prices is sorted in decreasing order, then profit cannot be earned at all.
